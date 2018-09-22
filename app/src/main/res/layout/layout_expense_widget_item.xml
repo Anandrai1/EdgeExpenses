@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dimen_10dp"
+    android:paddingTop="@dimen/dimen_10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/EdgeExpensesTextView"
+            android:text="@string/categories" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/EdgeExpensesTextView"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:text="@string/description"
+            android:textColor="@color/grey"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:textColor="@color/colorAccentGreen"
+        android:textSize="@dimen/text_size_18"
+        tools:text="+100" />
+
+</LinearLayout>

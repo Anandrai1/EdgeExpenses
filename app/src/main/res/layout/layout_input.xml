@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#222222">
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="1dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewAns"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue_600"
+            android:gravity="left|center"
+            android:includeFontPadding="true"
+            android:padding="5dp"
+            android:paddingStart="@dimen/dimen_3_10dp"
+            android:scrollHorizontally="true"
+            android:singleLine="false"
+            android:text="Amount"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/seven"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/eight"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/nine"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/buttonDel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/deletee"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/four"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/five"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/six"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/buttonSub"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/minus"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/one"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/two"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/three"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/buttonCal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawablePadding="0dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:src="@drawable/ic_calcul"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/buttonDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/dot"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/zero"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/buttoncla"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/cla"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/buttonDone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="registerKey"
+            android:text="@string/done"
+            android:textSize="20sp" />
+    </LinearLayout>
+</TableLayout>

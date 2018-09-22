@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <LinearLayout
+        android:id="@+id/ll_expense_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_25_10dp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            style="@style/EdgeExpensesTextView"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:gravity="center"
+            android:text="Available Amount"
+            android:textColor="@color/white9f"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_AvailableAmount"
+            style="@style/EdgeExpensesTextView"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/expenses"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone"
+            tools:text="10/10/15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.15"
+                android:gravity="bottom|end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_expense"
+                    style="@style/EdgeExpensesTextView"
+                    android:gravity="end|bottom"
+                    android:text="@string/expenses"
+                    android:textColor="@color/white9f"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_expense_am"
+                    style="@style/EdgeExpensesTextView"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:gravity="end|bottom"
+                    android:text="@string/total"
+                    android:textColor="@color/red_400"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/arc_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                app:arc_bottom_text="Expense as %"
+                app:arc_finished_color="@color/red"
+                app:arc_progress="40"
+                app:arc_stroke_width="@dimen/dimen_25dp"
+                app:arc_suffix_text_padding="@dimen/dimen_10dp"
+                app:arc_text_color="@color/white"
+                app:arc_text_size="@dimen/dimen_5_10dp"
+                app:arc_unfinished_color="@color/green" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.15"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_income"
+                    style="@style/EdgeExpensesTextView"
+                    android:gravity="start|bottom"
+                    android:text="@string/income"
+                    android:textColor="@color/white9f"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_income_am"
+                    style="@style/EdgeExpensesTextView"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:gravity="start|bottom"
+                    android:text="@string/total"
+                    android:textColor="@color/MediumSpringGreen"
+                    android:textSize="@dimen/text_size_14" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_total2"
+                style="@style/EdgeExpensesTextView"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:gravity="center"
+                android:text="@string/total"
+                android:textColor="@color/white9f"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                style="@style/EdgeExpensesTextView"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:gravity="center"
+                android:text="@string/total"
+                android:textColor="@color/white9f"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

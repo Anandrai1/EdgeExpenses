@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:tag="@string/statistics">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <fragment
+            android:id="@+id/select_date_fragment"
+            android:name="com.edgefintrack.expense.custom.SelectDateFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp" />
+
+        <!--<include layout="@layout/layout_date_range"/>-->
+
+        <TextView
+            android:id="@+id/tv_expenses_per_category"
+            style="@style/HeaderTextView"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:gravity="center"
+            android:text="@string/total_expenses_per_category"
+            android:textSize="@dimen/text_size_14" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <TextView
+                android:id="@+id/tv_bar_chart_category_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_chart_data"
+                android:visibility="gone" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bc_categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_category_percentage"
+            style="@style/HeaderTextView"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:gravity="center"
+            android:text="@string/categories_percentage"
+            android:textSize="@dimen/text_size_14" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pc_categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_pie_categories_chart_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_chart_data"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

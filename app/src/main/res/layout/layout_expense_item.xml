@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:foreground="@drawable/card_foreground"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true">
+    <!--card_view:cardCornerRadius="@dimen/corner_dp"
+        card_view:cardElevation="@dimen/elevation_dp"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/lay_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="@dimen/dimen_10dp">
+
+                <TextView
+                    android:id="@+id/expanded_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:text="@string/six"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expanded_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/expanded_date"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/six"
+                    android:textColor="@color/white"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/expanded_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/expanded_date"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    style="@style/EdgeExpensesTextView"
+                    android:text="@string/categories"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    style="@style/EdgeExpensesTextView"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/description"
+                    android:textColor="@color/grey"
+                    android:textSize="10dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/SeaGreen"
+                android:textSize="@dimen/text_size_14"
+                tools:text="+100" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginEnd="@dimen/dimen_3_10dp"
+            android:layout_marginStart="@dimen/dimen_3_10dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_3_10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/SeaGreen"
+            android:textSize="@dimen/text_size_14"
+            tools:text="@string/account" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

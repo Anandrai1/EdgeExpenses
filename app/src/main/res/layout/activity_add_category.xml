@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edgefintrack.expense.ui.categories.AddCategoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/tool_bar" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_25dp">
+
+            <EditText
+                android:id="@+id/ed_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/categories" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_categories_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_25dp"
+            android:background="@color/primary"
+            android:onClick="onSaveCategories"
+            android:text="@string/save" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

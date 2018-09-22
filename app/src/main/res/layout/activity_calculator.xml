@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edgefintrack.expense.ui.CalculatorActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/TableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#222222">
+
+            <RelativeLayout
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:background="@color/blue_600"
+                android:paddingBottom="1dp">
+
+                <TextView
+                    android:id="@+id/textViewCan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:includeFontPadding="true"
+                    android:onClick="onCancel"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text="@string/multiply"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/textViewAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="bottom"
+                    android:gravity="end|bottom"
+                    android:includeFontPadding="true"
+                    android:lines="6"
+                    android:padding="20dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text="Amount"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:typeface="monospace" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/buttonac"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/cla"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonDiv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/divide"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonMul"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/multiply"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonDel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/deletee"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/button7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/seven"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/button8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/eight"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/button9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/nine"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonSub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/minus"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/button4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/four"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/button5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/five"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/button6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/six"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/plus"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/button1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/one"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/two"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/button3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/three"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonEql"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:onClick="calculate"
+                    android:text="@string/equals"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/button00"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/zero2"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/button0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="registerKey"
+                    android:text="@string/zero"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/buttonDot"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="calculate"
+                    android:text="@string/dot"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textViewDone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    android:onClick="calculate"
+                    android:text="@string/done"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+        </TableLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

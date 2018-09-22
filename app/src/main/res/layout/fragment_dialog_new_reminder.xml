@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        style="@style/HeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dimen_5dp"
+        android:text="@string/reminder_help"
+        android:textSize="@dimen/text_size_14" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:hint="@string/reminder_name_hint" />
+
+    <TextView
+        style="@style/HeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/reminder_schedule_title"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        style="@style/HeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp" />
+
+    <TextView
+        style="@style/HeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/reminder_time_sent_title"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/HeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textSize="@dimen/text_size_14" />
+
+</LinearLayout>

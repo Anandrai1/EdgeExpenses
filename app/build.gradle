@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.edgefintrack.EdgeExpenses"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.1.0"
+        javaCompileOptions {
+            annotationProcessorOptions.includeCompileClasspath = true
+        }
+    }
+
+    signingConfigs {
+        release {
+            def Properties localProps = new Properties()
+            localProps.load(new FileInputStream(file('../local.properties')))
+            storeFile file("tracker_expense.jks")
+            storePassword localProps["storePass"]
+            keyAlias localProps["alias"]
+            keyPassword localProps["pass"]
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+def androidSdkVersion = "27.1.1"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    //compile 'com.google.android.gms:play-services:7.8.0'
+    implementation "com.android.support:gridlayout-v7:$androidSdkVersion"
+    implementation "com.android.support:support-annotations:$androidSdkVersion"
+    implementation "com.android.support:appcompat-v7:$androidSdkVersion"
+    implementation "com.android.support:design:$androidSdkVersion"
+    implementation "com.android.support:recyclerview-v7:$androidSdkVersion"
+    implementation "com.android.support:cardview-v7:$androidSdkVersion"
+    implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
+    implementation 'io.realm:realm-android:0.87.5'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.1.4'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+}

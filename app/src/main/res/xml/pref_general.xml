@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListPreference
+        android:defaultValue="@string/default_country"
+        android:entries="@array/countries_names"
+        android:entryValues="@array/country_values"
+        android:key="@string/pref_country_key"
+        android:title="@string/country_currency" />
+
+    <ListPreference
+        android:defaultValue="@string/default_date_format"
+        android:entries="@array/date_formats"
+        android:entryValues="@array/date_formats"
+        android:key="@string/date_format_key"
+        android:title="@string/date_format" />
+
+</PreferenceScreen>
